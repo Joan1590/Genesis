@@ -1,0 +1,13 @@
+{
+	"name": "Bioetica",
+	"version": "0.0.1",
+	"description":"Bioetica Web Aplication",
+	"main":"server.js",
+	"dependencies":{
+		"express": "latest",
+		"mongoose": "latest",
+		"method-override": "latest",
+		"body-parser": "latest",
+		"errorhandler": "latest"
+	}
+}
