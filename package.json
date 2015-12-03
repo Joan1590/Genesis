@@ -1,13 +1,19 @@
 {
-	"name": "Bioetica",
-	"version": "0.0.1",
-	"description":"Bioetica Web Aplication",
-	"main":"server.js",
-	"dependencies":{
-		"express": "latest",
-		"mongoose": "latest",
-		"method-override": "latest",
-		"body-parser": "latest",
-		"errorhandler": "latest"
-	}
+  "name": "Genesis",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": "latest",
+    "debug": "latest",
+    "express": "latest",
+    "jade": "latest",
+    "morgan": "latest",
+    "serve-favicon": "latest",
+    "mongodb": "latest",
+    "monk": "latest"
+  }
 }
