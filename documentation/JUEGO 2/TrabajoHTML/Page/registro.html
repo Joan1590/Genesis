@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego</title>	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		button{
+			width: 200px;
+			height:80px;
+		}
+		.first{
+			margin-top: 50px;
+		}
+		.margen{
+			border-left: double;
+		}
+		.footer{
+			background: rgba(31,78,121,1);
+			position:absolute;
+			bottom:0;
+			width: 100%;
+		}
+		.footer>div{
+			margin: 0px !important;
+			padding: 20px;
+			border-width: 1px;
+			border-color: rgba(65,113,156,1);
+			border-style: solid;
+			color: white;
+			height: 80px;
+		}
+		.first-form{
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba(31,78,121,1);
+			padding: 20px;
+			text-align: center;
+			background-color: rgba(31,78,121,1);
+			color:white;
+		}
+		.btn-primary{
+			background-color: rgba(31,78,121,1);
+		}
+		.backColorBlue{
+			background-color: rgba(31,78,121,1);
+			color:white;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#registerButton").click(function(){
+				var puede=false;
+				if(validar("nombreCompleto"))
+					if(validar("correoElectronico"))
+						if(validar("contrasena"))
+							if(validar("repetirContrasena"))
+								if(validar("pais"))
+									if(validar("ciudad"))
+										if(validar("fechaNacimiento"))
+											puede=true;
+				if(puede){
+					if($("#contrasena").val()!=$("#repetirContrasena").val()){
+						alert("Las contraseñas no coinciden");
+						$("#repetirContrasena").focus();
+					}else{
+						if($("#terminos").is(":checked")){
+							location.href="salon.html";
+						}
+						else{
+							alert("Debe aceptar los términos y condiciones para continuar");
+						}
+					}
+				}
+			});
+		});
+		function validar(item){
+			if($("#"+item).val().trim()==""){
+				alert("Debe ingresar el "+$("."+item).text());
+				$("#"+item).focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+<!-- 	<div class="row">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<br>
+	<br>
+	<br> -->
+	<div class="container-fluid">
+		<div class="row first">
+			<div class="col-md-2"></div>
+			<div class="col-md-4">
+				<div class="first-form ">
+					<form action="">
+						<input id="nombreCompleto" class="form1 form-control" type="text">
+						<label for="nombreCompleto" class="nombreCompleto">Nombre Completo</label>
+						<input id="correoElectronico" class="form1 form-control" type="email">
+						<label for="correoElectronico" class="correoElectronico">Correo Electrónico</label>
+						<input id="contrasena" class="form1 form-control" type="password">
+						<label for="contrasena" class="contrasena">Contraseña</label>
+						<input id="repetirContrasena" class="form1 form-control" type="password">
+						<label for="repetirContrasena" class="repetirContrasena" >Repetir Contraseña</label>
+						<input id="pais" class="form1 form-control" type="text"> 
+						<label for="pais" class="pais">País</label>
+						<input id="ciudad" class="form1 form-control" type="text">
+						<label for="ciudad" class="ciudad">Ciudad</label>
+						<input id="fechaNacimiento" class="form1 form-control" type="Date">
+						<label for="fechaNacimiento" class="fechaNacimiento">Fecha Nacimiento</label>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row pull-left" style="margin-left:50px;">
+					<br><br><br><br>
+					<div class="row">
+					 	<button class="btn btn-primary" onclick="alert('Esta en desarrollo...');">Leer Términos y condiciones</button>
+					 </div>
+					 <br>
+					 <div class="row">
+					 	<input type="checkbox" id="terminos">
+					 	<span class="backColorBlue" style="padding:10px">Acepto Términos y Condiciones</span>
+					 </div>
+					 <br>
+					 <div class="row">
+					 	<button class="btn btn-primary" id="registerButton">Registrarse</button>
+					 </div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<br><br>
+		<div class="row footer">
+			<div class="col-md-7">
+				© Universidad de san Buenaventura 
+				Seccional Medellín
+			</div>
+			<div class="col-md-1">
+				¿Quiénes somos?
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				Créditos
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				Contáctenos
+			</div>
+		</div>
+	</div>
+</body>
+</html>

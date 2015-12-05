@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Genesis</title>	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<style>
+		button{
+			width: 140px;
+			height: 50px;
+		}
+		.first{
+			margin-top: 50px;
+		}
+		.margen{
+			border-left: double;
+		}
+		.footer{
+			background: rgba(31,78,121,1);
+			position:absolute;
+			bottom:0;
+			width: 100%;
+		}
+		.footer>div{
+			margin: 0px !important;
+			padding: 20px;
+			border-width: 1px;
+			border-color: rgba(65,113,156,1);
+			border-style: solid;
+			color: white;
+			height: 80px;
+		}
+		.first-form{
+			border-width: 1px;
+			border-color: rgba(31,78,121,1);
+			border-style: solid;
+			color: white;
+			font-size: 50px;
+			padding: 10px;
+			text-align: center;
+			text-shadow: 3px 2px gray;
+		}
+		.second-form{
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba(31,78,121,1);
+			padding: 20px;
+			text-align: center;
+			height: 350px;
+			overflow-y:auto;
+		}
+		.btn-primary{
+			background-color: rgba(31,78,121,1);
+			padding: 20px;
+			height: 70px;
+			width: 150px;
+		}
+		.tablaFull{
+			width: 100%;
+		}
+		td{
+			background-color: black;
+		}
+		.numero{
+			width: 25px;
+			background-color: rgba(169,208,142,1) !important;
+		}
+		.letra>input{
+			width: 100%;
+			text-align: center;
+		}
+		.letra{
+			width: 25px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			setInterval(function(){
+				var text= "";
+				for(var i=0;i<$(".group1").length;i++){text+=$(".group1")[i].value;}
+				if(text.toUpperCase()=="AICITSUJ"){
+					var text= "";
+					for(var i=0;i<$(".group2").length;i++){text+=$(".group2")[i].value;}
+					if(text.toUpperCase()=="AIGOLOTNOED"){
+						var text= "";
+						for(var i=0;i<$(".group3").length;i++){text+=$(".group3")[i].value;}
+						if(text.toUpperCase()=="PRINCIPIOS"){
+							var text= "";
+							for(var i=0;i<$(".group4").length;i++){text+=$(".group4")[i].value;}
+							if(text.toUpperCase()=="BIOCENTRISMO"){
+								var text= "";
+								for(var i=0;i<$(".group5").length;i++){text+=$(".group5")[i].value;}
+								if(text.toUpperCase()=="EUGENESIA"){
+									var text= "";
+									for(var i=0;i<$(".group6").length;i++){text+=$(".group6")[i].value;}
+									if(text.toUpperCase()=="AUTONOMIA"){
+										var text= "";
+										for(var i=0;i<$(".group7").length;i++){text+=$(".group7")[i].value;}
+										if(text.toUpperCase()=="DADINGID"){
+											location.href="genesisJuego2.html";
+										}
+									}
+								}
+							}	
+						}		
+					}
+				}
+			},3000);
+
+		});
+	</script>
+</head>
+<body>
+<!-- 	<div class="row">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<br>
+	<br>
+	<br> -->
+	<div class="container-fluid">
+		<div class="row first">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<div class="first-form">
+							Génesis
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="row pull-right" style="margin-right:20px;">
+					<br>
+					<div class="row">
+					 	<button class="btn btn-primary" onclick="location.href='genesisComoJugar.html'">¿Cómo juego?</button>
+					 </div>
+					 <br><br>
+					 <div class="row">
+					 	<button class="btn btn-primary" onclick="">Aprende</button>
+					 </div>
+					 <br><br>
+					 <div class="row">
+					 	<button class="btn btn-primary" onclick="">Diviértete</button>
+					 </div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="second-form">
+					<h3>Crucigrama</h3>
+					<div class="col-md-6">
+						<table class="tablaFull" border=1>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="numero">3</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra">
+									<input type="text" class="group3" maxlength="1">
+								</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="numero">2</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="numero">1</td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group2 group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group3 group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group1" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group3" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="numero">6</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group6 group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group7" maxlength="1"></td>
+								<td class="numero">7</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="numero">5</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="numero">4</td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group2 group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group5 group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group6 group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td class="letra"><input type="text" class="group4" maxlength="1"></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group2" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group6" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td class="letra"><input type="text" class="group5" maxlength="1"></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6" style="text-align:left;">
+						<ol type="1">
+							<li>Principio de la bioética que  propende por la igualdad en el tratamiento de todos los humanos (Invertido).</li>
+							<li>Es el soporte fundamental de la bioética</li>
+							<li>Es la postura mayoritaria en la bioética y trata del estudio de los deberes. (Invertido)</li>
+							<li>Es la postura donde el centro no es el ser humano sino la vida en general. </li>
+							<li>Etimológicamente significa buen origen o principio</li>
+							<li>Es un principio bioético que trata de respetar la libertad de la persona.</li>
+							<li>Es una finalidad de la bioética que busca el respeto entre los seres humanos. (Invertido).</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="row pull-left" style="margin-left:20px;">
+					<br><br><br><br>
+					<div class="row">
+					 	<button class="btn btn-primary">Conceptos Claves</button>
+					 </div>
+					 <br><br>
+					 <div class="row">
+					 	<button class="btn btn-primary" onclick="location.href=history.go(-1)">Regresar</button>
+					 </div>
+				</div>
+			</div>
+		</div>
+		<div class="row footer">
+			<div class="col-md-7">
+				© Universidad de san Buenaventura 
+				Seccional Medellín
+			</div>
+			<div class="col-md-1">
+				¿Quiénes somos?
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				Créditos
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-1">
+				Contáctenos
+			</div>
+		</div>
+	</div>
+</body>
+</html>

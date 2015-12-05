@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1.
+		Usuarios
+	ul
+		each user, i in users
+			li= user.nombreCompleto
