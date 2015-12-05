@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1= title
+	form#formAddUser(name="adduser",method="post",action="/adduser")
+		input#inputNombreCompleto(type="text", placeholder="nombreCompleto", name="nombreCompleto")
+		input#inputCorreoElectronico(type="email", placeholder="correoElectronico", name="correoElectronico")
+		input#inputContrasena(type="text", placeholder="contraseña", name="contrasena")
+		input#inputPais(type="text", placeholder="pais", name="pais")
+		input#inputCiudad(type="text", placeholder="ciudad", name="ciudad")
+		input#inputFechaNacimiento(type="date", placeholder="fechaNacimiento", name="fechaNacimiento")
+		button#btnSubmit(type="submit") submit
