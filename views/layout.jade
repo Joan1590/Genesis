@@ -1,7 +1,33 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type='text/javascript', src='http://code.jquery.com/jquery-2.1.3.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+		link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', rel='stylesheet')
+	if background
+		body(style="background:url('/img/#{background}');background-size: 100%;")
+	else
+		body(style="background:url('/img/FONDO.JPG');background-size: 100%;")
+
+			.container-fluid
+				.row.first
+					h1.center.title= title
+					if user
+						p.center usuario actual:
+							b #{user.nombreCompleto}
+					br
+					block content
+				.row.footer
+					.col-md-7
+						|	© Universidad de san Buenaventura
+						|	Seccional Medellín
+					.col-md-1
+						|	¿Quiénes somos?
+					.col-md-1
+					.col-md-1
+						|	Créditos
+					.col-md-1
+					.col-md-1
+						|	Contáctenos

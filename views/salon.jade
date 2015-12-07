@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	.first-form.center
+		form#formLoginUser(name="loginuser",method="post",action="/genesis",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='Génesis') 
+		form#formLoginUser(name="loginuser",method="post",action="/parche",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='El Parche') 
+		br
+		form#formLoginUser(name="loginuser",method="post",action="/native",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='Native') 
+		form#formLoginUser(name="loginuser",method="post",action="/ciber",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='Mundo Ciber') 
+		br
+		form#formLoginUser(name="loginuser",method="post",action="/galeno",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='El Galeno') 
+		form#formLoginUser(name="loginuser",method="post",action="/historia",style="display:inline !important;")
+			input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+			input.btn.btn-primary.big-button(type="submit", value='Historia de Vida') 
