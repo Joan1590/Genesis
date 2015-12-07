@@ -8,7 +8,6 @@ var mongoose = require('mongoose');
 var marked = require('marked');
 
 var routes = require('./routes/index');
-var User = require('./model/users');
 
 mongoose.connect('mongodb://localhost/Genesis', function(err, res){
     if(err) console.log('ERROR: Conectando a la BD: '+err);

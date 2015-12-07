@@ -62,7 +62,7 @@ video{
     border-color: rgba(31,78,121,1);
     padding: 20px;
     text-align: center;
-    height: 350px;
+    max-height: 350px;
     overflow-y: auto;
 }
 .form-color{
@@ -85,4 +85,20 @@ label.form-color{
 .form-color>label{
 	width: 300px;
 	color:white;
+}
+.scroll{
+    background-image: url("../img/icon.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-position: inherit;
+    cursor: pointer;
+}
+.backScroll {
+    background-color: rgba(140,185,226,1);
+    color: white;
+    text-decoration: blink;
 }

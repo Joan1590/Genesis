@@ -1,0 +1,48 @@
+extends layout
+
+block content
+	.first-form.center
+		.col-md-3
+			//form#formLoginUser(name="loginuser",method="post",action="/juego")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='¿Cómo Juego?') 
+			form#formLoginUser(name="loginuser",method="post",action="/aprende")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Aprende')
+			form#formLoginUser(name="loginuser",method="post",action="/diviertete")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Diviertete')
+		.col-md-6
+			.second-form
+				.row
+					.col-md-4
+					.col-md-4
+						.scroll Instrucciones
+					.col-md-4
+				br
+				br
+				.row
+					.col-md-1
+					.col-md-10
+						.second-form.backScroll A continuación encontrará tres juegos: un crucigrama, una sopa de letras y un juego de apareamiento. Cada juego constituye un nivel. Para poder pasar de nivel se debe completar de forma correcta cada juego, si esto sucede, automáticamente se pasa al siguiente nivel.
+					.col-md-1
+				br
+				br
+				br
+				.row
+					.col-md-1
+					.col-md-4
+						#continuar.scroll Continuar
+					.col-md-2
+					.col-md-4
+						#comenzar.scroll Comienza
+					.col-md-1
+		.col-md-3
+			form#formLoginUser(name="loginuser",method="post",action="/conceptos")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Conceptos Claves') 
+			input.btn.btn-primary.big-button(type="button", value='Regresar' onclick='window.history.back();')
