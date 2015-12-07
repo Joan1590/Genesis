@@ -5,8 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var marked = require('marked');
 
 var routes = require('./routes/index');
+var User = require('./model/users');
 
 mongoose.connect('mongodb://localhost/Genesis', function(err, res){
     if(err) console.log('ERROR: Conectando a la BD: '+err);
@@ -59,6 +61,17 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+//Use autentication
+/*app.use('POST',function (req, res, next){
+  if (!req.body.correoElectronico) User.findOne({correoElectronico:req.body.correoElectronico}, function (err, user){
+    if (!user)  res.user = null;
+    else res.user = user;
+  });
+  console.log("Johan: "+res.user)
+  //if(!res.account) res.account = var account = require("../controller/account");
+  next();
+});*/
 
 
 module.exports = app;

@@ -1,5 +1,36 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.col-md-2
+	.col-md-4
+		.first-form
+			pre.center
+				|<b> Mensaje de bienvenida</b>
+				|Para nosotros es motivo de satisfacción 
+				|poder contar con la presencia de Ustedes en 
+				|éste….
+				|<br>
+				|A todos nos ha tocado aprender a convivir  
+				|con… 
+				|bla bla bla bla bla bla…<br>
+				|<br>
+				|<br>
+				|<br>
+			br
+			br
+			br
+			br
+			br
+	.col-md-4
+		.row.pull-right
+			br
+			br
+			br
+			br
+			.row
+				button.btn.btn-primary(onclick="location.href='loginuser'", style="width: 150px;height: 50px;") Acceder
+				br
+				br
+			.row
+				button.btn.btn-primary(onclick="location.href='newuser'", style="width: 150px;height: 50px;") Registrarse
+	.col-md-2

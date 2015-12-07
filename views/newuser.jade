@@ -1,12 +1,39 @@
 extends layout
 
 block content
-	h1= title
 	form#formAddUser(name="adduser",method="post",action="/adduser")
-		input#inputNombreCompleto(type="text", placeholder="nombreCompleto", name="nombreCompleto")
-		input#inputCorreoElectronico(type="email", placeholder="correoElectronico", name="correoElectronico")
-		input#inputContrasena(type="text", placeholder="contraseña", name="contrasena")
-		input#inputPais(type="text", placeholder="pais", name="pais")
-		input#inputCiudad(type="text", placeholder="ciudad", name="ciudad")
-		input#inputFechaNacimiento(type="date", placeholder="fechaNacimiento", name="fechaNacimiento")
-		button#btnSubmit(type="submit") submit
+		.row
+			.col-md-2
+			.col-md-4.form-color(style="padding:20px")
+				input#inputNombreCompleto(type="text", placeholder="nombreCompleto", name="nombreCompleto")
+				br
+				label(for="inputNombreCompleto") Nombre Completo
+				br
+				input#inputCorreoElectronico(type="email", placeholder="correoElectronico", name="correoElectronico")
+				br
+				label(for="inputCorreoElectronico") Correo Electrónico
+				br
+				input#inputContrasena(type="password", placeholder="contraseña", name="contrasena")
+				br
+				label(for="inputContrasena") Contraseña
+				br
+				input#inputPais(type="text", placeholder="pais", name="pais")
+				br
+				label(for="inputPais") País
+				br
+				input#inputCiudad(type="text", placeholder="ciudad", name="ciudad")
+				br
+				label(for="inputCiudad") Ciudad
+				br
+				input#inputFechaNacimiento(type="date", placeholder="fechaNacimiento", name="fechaNacimiento")
+				br
+				label(for="inputFechaNacimiento") Fecha de nacimiento
+			.col-md-4
+				button.btn-primary.big-button Leer términos y condiciones
+				br
+				p
+					input.btn-primary(type="checkbox") 
+					label.form-color Acepto términos y condiciones
+				br
+				button.btn-primary.big-button#btnSubmit(type="submit") Registrar
+			.col-md-2

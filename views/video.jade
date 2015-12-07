@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	.col-md-2
+	.col-md-4
+		.first-form
+			video(controls="controls", name="media")
+				source(src='/video/video.mp4' type='video/mp4')
+		br
+		br
+		br
+		br
+		br
+		br
+	.col-md-4
+		.row.pull-right
+			br
+			br
+			br
+			br
+			.row
+				form#formLoginUser(name="loginuser",method="post",action="/salon")
+					input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+					input.btn.btn-primary.big-button(type="submit", value='Continuar') 
+	.col-md-2

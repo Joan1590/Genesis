@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	.col-md-3
+	.col-md-6
+		.first-form
+			form.center#formLoginUser(name="loginuser",method="post",action="/loginuser")
+				input#inputCorreoElectronico(type="email", placeholder="correoElectronico", name="correoElectronico",style="width:200px")
+				br
+				label.form-color(style="width:200px",for="inputCorreoElectronico") Correo Electrónico
+				br
+				br
+				input#inputContrasena(type="password", placeholder="contraseña", name="contrasena",style="width:200px")
+				br
+				label.form-color(style="width:200px",for="inputContrasena") Contraseña
+				br
+				br
+				input.btn.btn-primary(type="submit", value='Ingresar')
+	.col-md-3

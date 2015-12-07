@@ -13,6 +13,7 @@
     "jade": "latest",
     "morgan": "latest",
     "serve-favicon": "latest",
-    "mongoose": "latest"
+    "mongoose": "latest",
+    "marked": "latest"
   }
 }

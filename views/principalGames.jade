@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	.first-form.center
+		.col-md-3
+			form#formLoginUser(name="loginuser",method="post",action="/juego")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='¿Cómo Juego?') 
+			form#formLoginUser(name="loginuser",method="post",action="/aprende")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Aprende')
+			form#formLoginUser(name="loginuser",method="post",action="/diviertete")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Diviertete')
+		.col-md-6
+			.second-form
+				.row
+					.col-md-6
+						pre= content
+					.col-md-6
+						image(src="/img/india.png")
+		.col-md-3
+			form#formLoginUser(name="loginuser",method="post",action="/conceptos")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Conceptos Claves') 
+			input.btn.btn-primary.big-button(type="button", value='Regresar' onclick='window.history.back();')
