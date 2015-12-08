@@ -4,7 +4,8 @@ var mongoose = require('mongoose'),
 var gamesUser = new Schema({
 	"idPersona":String,
 	"juegoGanado":Number,
-	"moduloGanado":String
+	"moduloGanado":String,
+	"bagdeGanado":Boolean
 });
 
 module.exports = mongoose.model('GameUser',gamesUser);

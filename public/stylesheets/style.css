@@ -102,3 +102,40 @@ label.form-color{
     color: white;
     text-decoration: blink;
 }
+input.scroll{
+	width: 200px;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+.tablaFull>tbody>tr>td,.tablaFull5>tbody>tr>td{
+	background-color: black;
+}
+.tablaFull>tbody>tr>.numero,.tablaFull5>tbody>tr>.numero{
+	width: 25px;
+	background-color: rgba(169,208,142,1) !important;
+}
+.tablaFull>tbody>tr>.letra>input,.tablaFull5>tbody>tr>.letra>input{
+	width: 100%;
+	text-align: center;
+}
+.tablaFull>tbody>tr>.letra,.tablaFull5>tbody>tr>.letra{
+	width: 25px;
+}
+.tablaFull,.tablaFull5{
+	width: 100%;
+}
+.tableFull1>tbody>tr>td:hover,.tableFull6>tbody>tr>td:hover{
+	background-color: red;
+	color:white;
+	cursor: pointer;
+}
+.tableFull1,.tableFull6{
+	width: 100%;
+	background-color: white;
+}
+.tabla3, .tabla4{
+	border-style: solid;
+	border-width: 1px;
+	border-color: blue;
+	background-color: white;
+}
