@@ -144,4 +144,58 @@ $(document).ready(function(){
 		validarGaleno();
 	});
 
+	//JUEGO 1 EL PARCHE
+	$(".cajon").click(function(){
+		var palabras = [{
+			"palabra":"INTERDISCIPLINARIO",
+			"esta":false
+		},{
+			"palabra":"DIGNIDAD",
+			"esta":false
+		},{
+			"palabra":"DERECHOS",
+			"esta":false
+		},{
+			"palabra":"BIOÉTICA",
+			"esta":false
+		},{
+			"palabra":"DESIGUALDAD",
+			"esta":false
+		},{
+			"palabra":"FAMILIA",
+			"esta":false
+		}];
+		var puede = true;
+		for(var i=0;i<$(".cajon").length;i++){
+			var existe = false;
+			for(var j=0;j<palabras.length;j++){
+				if(palabras[j].esta)
+					continue;
+				if($(".cajon")[i].value==palabras[j].palabra){
+					palabras[j].esta = true;
+					existe = true;
+					break;
+				}
+			}
+			if(!existe)
+				puede = false;
+		}
+		if(puede)
+			$("#formElParcheFirst").css("display","block");
+	});
+
+	//JUEGO 2 EL PARCHE
+	$(".completa").click(function(){
+		if($(".completa").val().toUpperCase()=="LA BIOÉTICA SOCIAL DEBE HACER UN ESTUDIO INTERDISCIPLINARIO DE TODOS LOS IMPACTOS DIRECTOS E INDIRECTOS QUE CAMBIAN Y TRANSFORMAN LA FAMILIA.")
+			$("#formElParcheSecond").css("display","block");
+	});
+
+	//JUEGO 3 EL PARCHE
+	$(".mapaconceptual").click(function(){
+		if($(".mapa")[1].value.toUpperCase()=="POBREZA"&&$(".mapa")[2].value.toUpperCase()=="SEXO Y GÉNERO"&&$(".mapa")[3].value.toUpperCase()=="CICLOS VITALES"
+			&&$(".mapa")[4].value.toUpperCase()=="MUJER CABEZA DE FAMILIA"&&$(".mapa")[5].value.toUpperCase()=="DIFERENCIAS FISIOLÓGICAS"&&$(".mapa")[6].value.toUpperCase()=="NACIMIENTO Y MUERTE"
+			&&$(".mapa")[7].value.toUpperCase()=="DESIGUALDAD"&&$(".mapa")[8].value.toUpperCase()=="DIFERENCIAS PSICOLÓGICAS Y SOCIALES"&&$(".mapa")[9].value.toUpperCase()=="VEJEZ"
+			&&$(".mapa")[10].value.toUpperCase()=="DIGNIDAD HUMANA"&&$(".mapa")[11].value.toUpperCase()=="DISCRIMINACIÓN SEXUAL"&&$(".mapa")[12].value.toUpperCase()=="SEGURIDAD SOCIAL")
+		$("#formElParcheThird").css("display","block");
+	});
 });
