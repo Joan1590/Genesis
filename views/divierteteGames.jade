@@ -27,7 +27,7 @@ block content
 				.row
 					.col-md-1
 					.col-md-10
-						.second-form.backScroll A continuación encontrará tres juegos: un crucigrama, una sopa de letras y un juego de apareamiento. Cada juego constituye un nivel. Para poder pasar de nivel se debe completar de forma correcta cada juego, si esto sucede, automáticamente se pasa al siguiente nivel.
+						.second-form.backScroll= content 
 					.col-md-1
 				br
 				br
@@ -35,10 +35,18 @@ block content
 				.row
 					.col-md-1
 					.col-md-4
-						#continuar.scroll Continuar
+						form#formLoginUser(name="loginuser",method="post",action="/juegos")
+							input#inputtitle(type="hidden", name="title", value="#{title}")
+							input#inputnivel(type="hidden", name="nivel", value="0")
+							input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+							input#continuar.scroll(type="submit", value="Continuar") 
 					.col-md-2
 					.col-md-4
-						#comenzar.scroll Comienza
+						form#formLoginUser(name="loginuser",method="post",action="/juegos")
+							input#inputtitle(type="hidden", name="title", value="#{title}")
+							input#inputnivel(type="hidden", name="nivel", value="1")
+							input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+							input#empezar.scroll(type="submit", value="Empezar") 
 					.col-md-1
 		.col-md-3
 			form#formLoginUser(name="loginuser",method="post",action="/conceptos")

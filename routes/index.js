@@ -21,13 +21,34 @@ router.get('/newuser', function (req, res, next){
 	res.render('newuser', {title:'Add new user'});
 });
 
+router.get('/contacto', function (req, res, next){
+	res.render('contacto', {title: 'Contacto'});
+});
+
+router.get('/credito', function (req, res, next){
+	res.render('credito', {title: 'Crédito'});
+});
+
+router.get('/somos', function (req, res, next){
+	res.render('somos', {title: '¿Quíenes somos??'});
+});
+
 router.get('/loginuser', function (req, res, next){
 	res.render('login', {title:'Login user'});
 });
 
 router.post('/salon', function (req, res, next){
 	console.log(req.body);
-	validateUser('Salón',res,req,'salon');
+	User.findOne({correoElectronico:req.body.correoElectronico}, function (err, user){
+		if (!user)	res.render('login', {title: 'Error, user invalid'});
+		else{
+			GamesUser.find({idPersona:user._id, bagdeGanado: true}, function (err, gameUsers){
+				console.log(gameUsers);
+				validateUser('Salón',res,req,'salon',null,null,null,gameUsers);
+			});
+		}
+	});
+	
 });
 //Salones
 router.post('/genesis', function (req, res, next){
@@ -151,48 +172,92 @@ router.post('/conceptos', function (req, res, next){
 });
 
 router.post('/diviertete', function (req, res, next){
+	switch(req.body.title)
+	{
+		case 'Génesis':
+		var content = 'A continuación encontrará tres juegos: un crucigrama, una sopa de letras y un juego de apareamiento. Cada juego constituye un nivel. Para poder pasar de nivel se debe completar de forma correcta cada juego, si esto sucede, automáticamente se pasa al siguiente nivel.';
+		var background = 'GENESIS.jpg';
+		break;
+		case 'El Parche':
+		var content = 'A continuación encontrará tres juegos: Cajón desastre, completa la frase y relacionar. Cada juego constituye un nivel. Para poder pasar de nivel se debe completar de forma correcta cada juego, si esto sucede, automáticamente se pasa al siguiente nivel.';
+		var background = 'GENESIS.jpg';
+		break;
+		case 'Nativo':
+		var content = '';
+		var background = 'NATIVO.jpg';
+		break;
+		case 'Mundo Ciber':
+		var content = '';
+		var background = 'GENESIS.jpg';
+		break;
+		case 'El Galeno':
+		var content = 'A continuación encontrará tres juegos: un crucigrama, una sopa de letras y un juego de apareamiento. Cada juego constituye un nivel. Para poder pasar de nivel se debe completar de forma correcta cada juego, si esto sucede, automáticamente se pasa al siguiente nivel.';
+		var background = 'GENESIS.jpg';
+		break;
+		case 'Historia de vida':
+		var content = '';
+		var background = 'HISTORIA DE LA VIDA.jpg';
+		break;
+	}
+	validateUser(req.body.title,res,req,'divierteteGames',content, background);
+});
+
+router.post('/juegos', function (req, res, next){
 	var hizoBagde = false;
-	var juego = 0;
+	var juego = 1;
+	switch(req.body.title)
+	{
+		case 'Génesis':
+		var background = 'GENESIS.jpg';
+		break;
+		case 'El Parche':
+		var background = 'GENESIS.jpg';
+		break;
+		case 'Nativo':
+		var background = 'NATIVO.jpg';
+		break;
+		case 'Mundo Ciber':
+		var background = 'GENESIS.jpg';
+		break;
+		case 'El Galeno':
+		var background = 'GENESIS.jpg';
+		break;
+		case 'Historia de vida':
+		var background = 'HISTORIA DE LA VIDA.jpg';
+		break;
+	}
 	User.findOne({correoElectronico:req.body.correoElectronico}, function (err, user){
 		if (!user)	res.render('login', {title: 'Error, user invalid'});
-		else
-		{
-			GamesUser.find({idPersona:user._id, moduloGanado: req.body.title}, function (err, gameUsers){
-				if(gameUsers){
-					for(i=0;i<gameUsers.length;i++)
-						juego++;
-					if(juego==3) hizoBagde=true;
-				}
-			});
-			switch(req.body.title)
-			{
-				case 'Génesis':
+		else{
+			if(req.body.winner){
+				console.log('POST');
+				console.log(req.body);
 
-				var content = '';
-				var background = 'GENESIS.jpg';
-				break;
-				case 'El Parche':
-				var content = '';
-				var background = 'GENESIS.jpg';
-				break;
-				case 'Nativo':
-				var content = '';
-				var background = 'NATIVO.jpg';
-				break;
-				case 'Mundo Ciber':
-				var content = '';
-				var background = 'GENESIS.jpg';
-				break;
-				case 'El Galeno':
-				var content = '';
-				var background = 'GENESIS.jpg';
-				break;
-				case 'Historia de vida':
-				var content = '';
-				var background = 'HISTORIA DE LA VIDA.jpg';
-				break;
+				var gameuser = new GamesUser({
+					"idPersona":user._id,
+					"juegoGanado":req.body.nivel-1,
+					"moduloGanado":req.body.title,
+					"bagdeGanado":req.body.nivel == 4 ? true: false
+				});
+
+				gameuser.save(function (err){
+					if (!err) console.log('juego almacenado!!');
+					else console.log('ERROR: ' + err);
+				});
 			}
-			validateUser(req.body.title,res,req,'divierteteGames',content, background);
+			if(req.body.nivel==0){
+				GamesUser.find({idPersona:user._id, moduloGanado: req.body.title}, function (err, gameUsers){
+					if(gameUsers){
+						for(i=0;i<gameUsers.length;i++)
+							juego++;
+						if(juego==4) hizoBagde=true;
+					}
+					validateUser(req.body.title,res,req,'playGames','', background, juego);
+				});
+			}
+			else{
+				validateUser(req.body.title,res,req,'playGames','', background, req.body.nivel);
+			}
 		}
 	});
 });
@@ -235,10 +300,11 @@ router.post('/adduser', function (req, res, next){
 	res.render('video', {title: 'Video', user:user});
 });
 
-validateUser = function(title,res,req,page,content,background){
+validateUser = function(title,res,req,page,content,background,nivel,bagdes){
+	var nivel= nivel?nivel:"";
 	User.findOne({correoElectronico:req.body.correoElectronico}, function (err, user){
 		if (!user)	res.render('login', {title: 'Error, user invalid'});
-		else res.render(page, {title: title, user:user, content: content, background: background});
+		else res.render(page, {title: title, user:user, content: content, background: background, nivel: nivel.toString(), bagdes:bagdes});
 	});
 }
 

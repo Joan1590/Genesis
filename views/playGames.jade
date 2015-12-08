@@ -1,0 +1,1405 @@
+extends layout
+
+block content
+	.first-form.center
+		.col-md-3
+			//form#formLoginUser(name="loginuser",method="post",action="/juego")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='¿Cómo Juego?') 
+			form#formLoginUser(name="loginuser",method="post",action="/aprende")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Aprende')
+			form#formLoginUser(name="loginuser",method="post",action="/diviertete")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Diviertete')
+		.col-md-6
+			.second-form
+				case title
+					when 'Génesis'
+						case nivel
+							when '1'
+								h3 Crucigrama
+								.col-md-6
+									table.tablaFull(border='1')
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.numero 3
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.numero 2
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td.numero 1
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td.letra
+												input.group2.group1(type='text', maxlength='1')
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td.letra
+												input.group3.group1(type='text', maxlength='1')
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td.letra
+												input.group1(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3(type='text', maxlength='1')
+											td
+											td.numero 6
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group6.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.letra
+												input.group7(type='text', maxlength='1')
+											td.numero 7
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.numero 5
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td.numero 4
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group2.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group5.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group6.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td.letra
+												input.group4(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group2(type='text', maxlength='1')
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td.letra
+												input.group6(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group5(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+								.col-md-6(style='text-align:left;')
+									ol(type='1')
+										li Principio de la bioética que  propende por la igualdad en el tratamiento de todos los humanos (Invertido).
+										li Es el soporte fundamental de la bioética
+										li Es la postura mayoritaria en la bioética y trata del estudio de los deberes. (Invertido)
+										li Es la postura donde el centro no es el ser humano sino la vida en general. 
+										li Etimológicamente significa buen origen o principio
+										li Es un principio bioético que trata de respetar la libertad de la persona.
+										li Es una finalidad de la bioética que busca el respeto entre los seres humanos. (Invertido).
+									form#formGenesisFirst(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="2")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar") 
+							when '2'
+								h3 Sopa de letras
+								.col-md-6
+									table.tableFull1(border='1')
+										tr
+											td C
+											td N
+											td A
+											td I
+											td C
+											td I
+											td T
+											td S
+											td U
+											td J
+											td O
+											td L
+											td P
+											td N
+											td N
+										tr
+											td O
+											td O
+											td I
+											td F
+											td R
+											td I
+											td D
+											td A
+											td K
+											td H
+											td A
+											td L
+											td O
+											td O
+											td A
+										tr
+											td N
+											td R
+											td S
+											td L
+											td R
+											td V
+											td I
+											td R
+											td G
+											td I
+											td N
+											td S
+											td A
+											td A
+											td S
+										tr
+											td S
+											td U
+											td E
+											td O
+											td B
+											td I
+											td O
+											td T
+											td I
+											td C
+											td O
+											td I
+											td C
+											td I
+											td H
+										tr
+											td E
+											td E
+											td N
+											td R
+											td O
+											td S
+											td C
+											td A
+											td L
+											td P
+											td C
+											td V
+											td I
+											td B
+											td R
+										tr
+											td N
+											td G
+											td E
+											td I
+											td T
+											td A
+											td L
+											td A
+											td C
+											td N
+											td A
+											td I
+											td T
+											td M
+											td E
+										tr
+											td T
+											td A
+											td G
+											td D
+											td I
+											td F
+											td D
+											td O
+											td E
+											td E
+											td S
+											td E
+											td E
+											td O
+											td D
+										tr
+											td I
+											td O
+											td U
+											td A
+											td N
+											td R
+											td E
+											td C
+											td C
+											td M
+											td I
+											td N
+											td O
+											td L
+											td O
+										tr
+											td M
+											td S
+											td E
+											td A
+											td V
+											td E
+											td I
+											td E
+											td N
+											td O
+											td A
+											td T
+											td R
+											td O
+											td T
+										tr
+											td I
+											td O
+											td L
+											td A
+											td O
+											td F
+											td L
+											td I
+											td C
+											td R
+											td P
+											td O
+											td L
+											td C
+											td E
+										tr
+											td E
+											td I
+											td N
+											td V
+											td E
+											td S
+											td T
+											td I
+											td G
+											td A
+											td C
+											td I
+											td O
+											td N
+											td P
+										tr
+											td N
+											td I
+											td I
+											td N
+											td T
+											td R
+											td O
+											td C
+											td B
+											td L
+											td U
+											td R
+											td T
+											td I
+											td S
+										tr
+											td T
+											td N
+											td E
+											td N
+											td D
+											td S
+											td C
+											td L
+											td A
+											td R
+											td O
+											td F
+											td R
+											td O
+											td E
+										tr
+											td O
+											td B
+											td T
+											td I
+											td G
+											td O
+											td R
+											td A
+											td T
+											td S
+											td I
+											td V
+											td O
+											td M
+											td R
+										tr
+											td R
+											td E
+											td S
+											td P
+											td O
+											td N
+											td S
+											td A
+											td B
+											td I
+											td L
+											td I
+											td D
+											td A
+											td D
+								.col-md-6.pull-left(style='text-align:left;')
+									ol
+										li Consentimiento
+										li Responsabilidad
+										li Beneficencia
+										li Respeto
+										li Investigación
+										li Justicia
+										li Eugenesia
+										li Ética
+										li Moral
+										li Biótico
+									form#formGenesisSecond(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="3")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar")
+							when '3'
+								.row
+									.col-md-5.tabla3
+										div(onclick="this.style.background='yellow'") Protección al medio ambiente, biósfera y biodiversidad
+										hr
+										div(onclick="this.style.background='orange'") Beneficencia
+										hr
+										div(onclick="this.style.background='blue';this.style.color='white'") Remordimiento
+										hr
+										div(onclick="this.style.background='black';this.style.color='white'") Exclusión
+										hr
+										div(onclick="this.style.background='red';this.style.color='white'") Normas sociales
+										hr
+										div(onclick="this.style.background='gray'") Reflexión acerca de la moral
+										hr
+										div(onclick="this.style.background='green'") Biocentrismo
+										hr
+										div(onclick="this.style.background='purple';this.style.color='white'") Aprendizaje de valores
+									.col-md-2
+									.col-md-5.tabla3
+										div(onclick="this.style.background='green'") Bioética
+										hr
+										div(onclick="this.style.background='blue';this.style.color='white'") Consecuencia Interna de la moral
+										hr
+										div(onclick="this.style.background='orange'") Principio Bioético
+										hr
+										div(onclick="this.style.background='black';this.style.color='white'") Consecuencia Externa de la Moral
+										hr
+										div(onclick="this.style.background='yellow'") Declaración Universal sobre Bioética y Derechos Humanos
+										hr
+										div(onclick="this.style.background='gray'") Ética
+										hr
+										div(onclick="this.style.background='purple';this.style.color='white'") Enculturación
+										hr
+										div(onclick="this.style.background='red';this.style.color='white'") Moral
+								.row
+									form#formGenesisThird(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="4")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar")
+							when '4'
+								h2.center.title Ganaste
+								form#formGenesisThird(name="loginuser",method="post",action="/salon")
+									input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+									input#continuar.scroll(type="submit", value="Continuar")
+					when 'El Galeno'
+						case nivel
+							when '1'
+								.row
+									.col-md-5.tabla4
+										div(onclick="this.style.background='yellow'") Caso Tuskegee
+										hr
+										div(onclick="this.style.background='orange'") Consentimiento informado
+										hr
+										div(onclick="this.style.background='blue';this.style.color='white'") Trasplante
+										hr
+										div(onclick="this.style.background='black';this.style.color='white'") Autonomía
+										hr
+										div(onclick="this.style.background='red';this.style.color='white'") Escasez de órganos
+										hr
+										div(onclick="this.style.background='gray'") Ensayos clínicos
+										hr
+										div(onclick="this.style.background='green'") Eutanasia
+										hr
+										div(onclick="this.style.background='purple';this.style.color='white'") Endógenos
+									.col-md-2
+									.col-md-5.tabla4
+										div(onclick="this.style.background='black';this.style.color='white'") Testamentos vitales
+										hr
+										div(onclick="this.style.background='purple';this.style.color='white'") Propio sistema biológico
+										hr
+										div(onclick="this.style.background='yellow'") Población vulnerable
+										hr
+										div(onclick="this.style.background='green'") Enfermo deshauciado
+										hr
+										div(onclick="this.style.background='orange'") Tratamiento clínico
+										hr
+										div(onclick="this.style.background='red';this.style.color='white'") Órganos artificiales
+										hr
+										div(onclick="this.style.background='gray'") Experimento con seres vivos
+										hr
+										div(onclick="this.style.background='blue';this.style.color='white'") Medicina regenerativa
+								.row
+									form#formElGalenoFirst(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="2")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar")
+							when '2'
+								h3 Crucigrama
+								.col-md-6
+									table.tablaFull5(border='1')
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.numero 2
+											td
+											td
+											td
+											td
+											td
+											td.numero 4
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.numero 3
+											td
+											td
+											td
+											td.letra
+												input.group4v(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td.numero 1
+											td.letra
+												input.group2v.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.group3v.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.grupo1h(type='text', maxlength='1')
+											td.letra
+												input.group4v.grupo1h(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3v(type='text', maxlength='1')
+											td
+											td
+											td
+											td.letra
+												input.group4v(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3v(type='text', maxlength='1')
+											td
+											td
+											td
+											td.letra
+												input.group4v(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3v(type='text', maxlength='1')
+											td
+											td
+											td
+											td.letra
+												input.group4v(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.numero 1
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group3v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td.numero 2
+											td.letra
+												input.group3v.grupo2h(type='text', maxlength='1')
+											td.letra
+												input.grupo2h(type='text', maxlength='1')
+											td.letra
+												input.grupo2h(type='text', maxlength='1')
+											td.letra
+												input.grupo2h(type='text', maxlength='1')
+											td.letra
+												input.grupo2h(type='text', maxlength='1')
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td.numero 3
+											td.letra
+												input.group1v.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.group2v.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td.letra
+												input.grupo3h(type='text', maxlength='1')
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.letra
+												input.group1v(type='text', maxlength='1')
+											td
+											td.letra
+												input.group2v(type='text', maxlength='1')
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+										tr
+											td
+											td
+											td
+											td.numero 4
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group2v.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td.letra
+												input.group4h(type='text', maxlength='1')
+											td
+										tr
+											td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td
+											td &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								.col-md-6(style='text-align:left;')
+									h3 Horizontal
+									ol(type='1')
+										li Los productos de la naturaleza que ponen en peligro no sólo la existencia singular sino la existencia como especie.
+										li Organismos de alta complejidad que nacen, crecen, se desarrollan y mueren
+										li Es el estado de vulnerabilidad de la persona para enfrentarse a eventos que sean susceptibles a la pérdida o daño de algo.
+										li Poner o reparar una cosa u órgano deteriorado o gastada en buena condición ya sea de una forma artificial o a través de los propios elementos.
+									h3 Vertical
+									ol(type='1')
+										li Invertido, Una persona que tiene una alteración leve o grave del funcionamiento del organismo.
+										li implante material biológico de un animal a un ser humano, teniendo como desventaja las barreras inmunitarias que puede generarse en el animal.
+										li Plural, Conjunto de tejidos que forman una estructura y tiene una función determinada.
+										li Intenso Sufrimiento.
+									form#formElGalenoSecond(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="3")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar") 
+							when '3'
+								h3 Sopa de letras
+								.col-md-6
+									table.tableFull6(border='1')
+										tr
+											td V
+											td E
+											td P
+											td S
+											td T
+											td U
+											td Z
+											td R
+											td T
+											td O
+											td W
+											td Y
+											td N
+											td G
+											td A
+										tr
+											td M
+											td U
+											td T
+											td A
+											td C
+											td I
+											td O
+											td N
+											td E
+											td S
+											td L
+											td D
+											td I
+											td U
+											td Q
+										tr
+											td P
+											td T
+											td L
+											td A
+											td O
+											td C
+											td R
+											td O
+											td N
+											td T
+											td A
+											td P
+											td S
+											td E
+											td N
+										tr
+											td A
+											td A
+											td U
+											td N
+											td L
+											td A
+											td T
+											td E
+											td P
+											td D
+											td E
+											td D
+											td O
+											td S
+											td O
+										tr
+											td I
+											td N
+											td D
+											td T
+											td E
+											td S
+											td O
+											td Ñ
+											td I
+											td P
+											td I
+											td R
+											td T
+											td O
+											td I
+										tr
+											td S
+											td A
+											td I
+											td A
+											td G
+											td R
+											td T
+											td C
+											td S
+											td O
+											td M
+											td E
+											td R
+											td Y
+											td S
+										tr
+											td A
+											td S
+											td C
+											td S
+											td I
+											td X
+											td A
+											td X
+											td S
+											td C
+											td W
+											td T
+											td O
+											td N
+											td U
+										tr
+											td N
+											td I
+											td O
+											td R
+											td O
+											td P
+											td N
+											td B
+											td J
+											td A
+											td E
+											td N
+											td B
+											td A
+											td F
+										tr
+											td A
+											td A
+											td Ñ
+											td W
+											td A
+											td T
+											td A
+											td L
+											td I
+											td R
+											td M
+											td A
+											td T
+											td L
+											td S
+										tr
+											td T
+											td X
+											td E
+											td C
+											td R
+											td A
+											td S
+											td O
+											td Z
+											td L
+											td Y
+											td N
+											td C
+											td F
+											td N
+										tr
+											td S 
+											td O 
+											td S 
+											td A 
+											td E 
+											td C 
+											td I 
+											td Q 
+											td Y 
+											td P 
+											td I 
+											td O 
+											td M 
+											td U 
+											td A
+										tr
+											td I 
+											td I 
+											td N 
+											td S 
+											td W 
+											td P 
+											td A 
+											td U 
+											td X 
+											td E 
+											td Ñ 
+											td D 
+											td T 
+											td V 
+											td R
+										tr
+											td D 
+											td A 
+											td D 
+											td I 
+											td S 
+											td E 
+											td T 
+											td N 
+											td A 
+											td L 
+											td P 
+											td S 
+											td A 
+											td R 
+											td T
+										tr
+											td P 
+											td O 
+											td E 
+											td T 
+											td A 
+											td L 
+											td R 
+											td I 
+											td G 
+											td O 
+											td T 
+											td A 
+											td C 
+											td D
+											td A
+										tr
+											td U 
+											td D 
+											td A 
+											td D 
+											td I 
+											td L 
+											td I 
+											td B 
+											td I 
+											td T 
+											td A 
+											td P 
+											td M 
+											td O
+											td C
+								.col-md-6.pull-left(style='text-align:left;')
+									ol
+										li Consentimiento
+										li Responsabilidad
+										li Beneficencia
+										li Respeto
+										li Investigación
+										li Justicia
+										li Eugenesia
+										li Ética
+										li Moral
+										li Biótico
+									form#formElGalenoThird(name="loginuser",method="post",action="/juegos",style="display:none")
+										input#inputtitle(type="hidden", name="title", value="#{title}")
+										input#inputnivel(type="hidden", name="nivel", value="4")
+										input#inputwinner(type="hidden", name="winner", value="1")
+										input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+										input#continuar.scroll(type="submit", value="Continuar")
+							when '4'
+								h2.center.title Ganaste
+								form#formGenesisThird(name="loginuser",method="post",action="/salon")
+									input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+									input#continuar.scroll(type="submit", value="Continuar")
+					when 'El Parche'
+						case
+							when '1'
+								h3 Sopa de letras
+								.col-md-6
+		.col-md-3
+			form#formLoginUser(name="loginuser",method="post",action="/conceptos")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Conceptos Claves') 
+			input.btn.btn-primary.big-button(type="button", value='Regresar' onclick='window.history.back();')
