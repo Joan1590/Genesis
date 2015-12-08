@@ -1393,10 +1393,180 @@ block content
 									input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
 									input#continuar.scroll(type="submit", value="Continuar")
 					when 'El Parche'
-						case
+						case nivel
 							when '1'
-								h3 Sopa de letras
-								.col-md-6
+								.row
+									h3 CAJÓN DE PALABRAS
+									.col-md-7
+										table.tableParche1
+											tr
+												td INTER
+												td DIG
+												td DE
+												td DESI
+												td BI
+												td FA
+											tr
+												td E
+												td MI
+												td RIO
+												td DIS
+												td CHOS
+												td PLI
+											tr
+												td LI
+												td NA
+												td O
+												td A
+												td CI
+												td GUAL
+											tr
+												td DAD
+												td RE
+												td DAD
+												td TI
+												td NI
+												td CA
+										br
+										br
+										input.cajon(type="text") 
+										input.cajon(type="text") 
+										input.cajon(type="text") 
+										input.cajon(type="text") 
+										input.cajon(type="text") 
+										input.cajon(type="text") 
+									.col-md-5.pull-left(style='text-align:left;')
+										p En el cuadro que hay a continuación están todas las sílabas que necesitas para formar los nombres de seis de las palabras involucradas en el texto de Bioética y sociedad.¿Puedes formarlas? 
+										form#formElParcheFirst(name="loginuser",method="post",action="/juegos",style="display:none")
+											input#inputtitle(type="hidden", name="title", value="#{title}")
+											input#inputnivel(type="hidden", name="nivel", value="2")
+											input#inputwinner(type="hidden", name="winner", value="1")
+											input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+											input#continuar.scroll(type="submit", value="Continuar")
+								.row
+							when '2'
+								.row
+									h3 COMPLETA LA FRASE
+									.col-md-7
+										table.tableParche1(border='1')
+											tr
+												td DIRECTOS
+												td ESTUDIO
+												td LA BIOÉTICA
+											tr
+												td SOCIAL
+												td HACER
+												td DE TODOS
+											tr
+												td QUE
+												td LA FAMILIA
+												td E
+											tr
+												td UN
+												td LOS
+												td DEBE
+											tr
+												td TRANSFORMAN
+												td CAMBIAN 
+												td Y
+											tr
+												td INTERSICIPLINARIO
+												td INDIRECTOS
+												td IMPACTOS
+										br
+										textarea.completa
+									.col-md-5.pull-left(style='text-align:left;')
+										p A continuación encontraras una serie de palabras que completan una frase que se encuentra en el texto sobre Bioética y Sociedad, dales un orden y un sentido coherente. 
+										form#formElParcheSecond(name="loginuser",method="post",action="/juegos",style="display:none")
+											input#inputtitle(type="hidden", name="title", value="#{title}")
+											input#inputnivel(type="hidden", name="nivel", value="3")
+											input#inputwinner(type="hidden", name="winner", value="1")
+											input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+											input#continuar.scroll(type="submit", value="Continuar")
+							when '3'
+								.row
+									h3 MAPA CONCEPTUAL
+									.col-md-6
+										table.tableParche1(border='1')
+											tr
+												td Pobreza
+												td Diferencias fisiológicas
+												td Vejez
+											tr
+												td Sexo y género
+												td Nacimiento y muerte
+												td Desigualdad
+											tr
+												td Ciclos vitales
+												td Mujer cabeza de familia
+												td Dignidad humana
+											tr
+												td Discriminación sexual
+												td Seguridad social
+												td Diferencias psicológicas y sociales
+										br
+										div
+											table.mapaconceptual
+												tr
+													td(colspan=3)
+														input.mapa(readonly="readonly", value="Bioética y sociedad", style="width: 130px;")
+												tr
+													td.center.colorwhite /
+													td.center.colorwhite |
+													td.center.colorwhite \
+												tr
+													td
+														input.mapa
+													td
+														input.mapa
+													td
+														input.mapa
+												tr
+													td.center.colorwhite |
+													td.center.colorwhite |
+													td.center.colorwhite |
+												tr
+													td
+														input.mapa
+													td
+														input.mapa
+													td
+														input.mapa
+												tr
+													td.center.colorwhite |
+													td.center.colorwhite |
+													td.center.colorwhite |
+												tr
+													td
+														input.mapa
+													td
+														input.mapa
+													td
+														input.mapa
+												tr
+													td.center.colorwhite |
+													td.center.colorwhite |
+													td.center.colorwhite |
+												tr
+													td
+														input.mapa
+													td
+														input.mapa
+													td
+														input.mapa
+									.col-md-6.pull-left(style='text-align:left;')
+										p A continuación encontraras una serie de palabras con las que se deben hacer un mapa conceptual,  relacionando las temáticas que integran las disciplinas sociales con la bioética y algunos de los ejemplos mencionados en el escrito.
+										form#formElParcheThird(name="loginuser",method="post",action="/juegos",style="display:none")
+											input#inputtitle(type="hidden", name="title", value="#{title}")
+											input#inputnivel(type="hidden", name="nivel", value="4")
+											input#inputwinner(type="hidden", name="winner", value="1")
+											input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}")
+											input#continuar.scroll(type="submit", value="Continuar")
+							when '4'
+								h2.center.title Ganaste
+								form#formGenesisThird(name="loginuser",method="post",action="/salon")
+									input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}")
+									input#continuar.scroll(type="submit", value="Continuar")
 		.col-md-3
 			form#formLoginUser(name="loginuser",method="post",action="/conceptos")
 				input#inputtitle(type="hidden", name="title", value="#{title}")
