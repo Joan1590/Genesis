@@ -1567,6 +1567,10 @@ block content
 								form#formGenesisThird(name="loginuser",method="post",action="/salon")
 									input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}")
 									input#continuar.scroll(type="submit", value="Continuar")
+					when 'Nativo'
+						case nivel
+							when '1'
+								
 		.col-md-3
 			form#formLoginUser(name="loginuser",method="post",action="/conceptos")
 				input#inputtitle(type="hidden", name="title", value="#{title}")
