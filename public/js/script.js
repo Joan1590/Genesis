@@ -186,7 +186,7 @@ $(document).ready(function(){
 
 	//JUEGO 2 EL PARCHE
 	$(".completa").click(function(){
-		if($(".completa").val().toUpperCase()=="LA BIOÉTICA SOCIAL DEBE HACER UN ESTUDIO INTERDISCIPLINARIO DE TODOS LOS IMPACTOS DIRECTOS E INDIRECTOS QUE CAMBIAN Y TRANSFORMAN LA FAMILIA.")
+		if($(".completa").val().toUpperCase()=="LA BIOÉTICA SOCIAL DEBE HACER UN ESTUDIO INTERDISCIPLINARIO DE TODOS LOS IMPACTOS DIRECTOS E INDIRECTOS QUE CAMBIAN Y TRANSFORMAN LA FAMILIA")
 			$("#formElParcheSecond").css("display","block");
 	});
 
@@ -198,4 +198,194 @@ $(document).ready(function(){
 			&&$(".mapa")[10].value.toUpperCase()=="DIGNIDAD HUMANA"&&$(".mapa")[11].value.toUpperCase()=="DISCRIMINACIÓN SEXUAL"&&$(".mapa")[12].value.toUpperCase()=="SEGURIDAD SOCIAL")
 		$("#formElParcheThird").css("display","block");
 	});
+
+	//JUEGO 1 NATIVO
+	$(".cajonNativo").click(function(){
+		var palabras = [{
+			"palabra":"RENOVABLES",
+			"esta":false
+		},{
+			"palabra":"PERENNES",
+			"esta":false
+		},{
+			"palabra":"EXTERNALIDAD",
+			"esta":false
+		},{
+			"palabra":"SOSTENIBILIDAD",
+			"esta":false
+		},{
+			"palabra":"BIOPROSPECCIÓN",
+			"esta":false
+		},{
+			"palabra":"BIODEGRADABILIDAD",
+			"esta":false
+		}];
+		var puede = true;
+		for(var i=0;i<$(".cajonNativo").length;i++){
+			var existe = false;
+			for(var j=0;j<palabras.length;j++){
+				if(palabras[j].esta)
+					continue;
+				if($(".cajonNativo")[i].value==palabras[j].palabra){
+					palabras[j].esta = true;
+					existe = true;
+					break;
+				}
+			}
+			if(!existe)
+				puede = false;
+		}
+		if(puede)
+			$("#formNativoFirst").css("display","block");
+	});
+
+	//JUEGO 2 NATIVO
+	$(".completaNativo").click(function(){
+		if($(".completaNativo").val().toUpperCase()=="ES DIFÍCIL IMAGINAR UN DESARROLLO ECONÓMICO SIN IMPACTO SOBRE SU MEDIO PERO SI ES POSIBLE GENERAR PROCESOS DE PRODUCCIÓN MÁS SOSTENIBLES EN DONDE SE INTERNALICEN SUS OUTPUTS")
+			$("#formNativoSecond").css("display","block");
+	});
+
+	//JUEGO 3 NATIVO
+	$(".mapaconceptualNativo").click(function(){
+		if($(".mapaNativo")[1].value.toUpperCase()=="ECOSISTEMAS"&&$(".mapaNativo")[2].value.toUpperCase()=="ECOLOGÍA HUMANA"&&$(".mapaNativo")[3].value.toUpperCase()=="BIOPIRATERÍA"&&$(".mapaNativo")[4].value.toUpperCase()=="TIERRA"
+			&&$(".mapaNativo")[5].value.toUpperCase()=="ESTUDIA"&&$(".mapaNativo")[6].value.toUpperCase()=="ESPECIES"&&$(".mapaNativo")[7].value.toUpperCase()=="CAPAS DE LA TIERRA"&&$(".mapaNativo")[8].value.toUpperCase()=="COMPORTAMIENTO HUMANO"
+			&&$(".mapaNativo")[9].value.toUpperCase()=="CULTURA"&&$(".mapaNativo")[10].value.toUpperCase()=="MEDIO AMBIENTE"&&$(".mapaNativo")[11].value.toUpperCase()=="FLORA"&&$(".mapaNativo")[12].value.toUpperCase()=="FAUNA"
+			&&$(".mapaNativo")[13].value.toUpperCase()=="ATMÓSFERA"&&$(".mapaNativo")[14].value.toUpperCase()=="HIDRÓSFERA"&&$(".mapaNativo")[15].value.toUpperCase()=="GEOSFERA"&&$(".mapaNativo")[16].value.toUpperCase()=="CALIDAD DE VIDA"
+			&&$(".mapaNativo")[17].value.toUpperCase()=="TRÁFICO ILEGAL"&&$(".mapaNativo")[18].value.toUpperCase()=="BIOMAS"&&$(".mapaNativo")[19].value.toUpperCase()=="HUELLA ECOLÓGICA"&&$(".mapaNativo")[20].value.toUpperCase()=="PERECE"
+			&&$(".mapaNativo")[21].value.toUpperCase()=="AGRESOR"&&$(".mapaNativo")[22].value.toUpperCase()=="TERRESTRE"&&$(".mapaNativo")[23].value.toUpperCase()=="ACUÁTICO"&&$(".mapaNativo")[24].value.toUpperCase()=="AÉREO"
+			&&$(".mapaNativo")[25].value.toUpperCase()=="EDUCACIÓN"&&$(".mapaNativo")[26].value.toUpperCase()=="GESTIÓN AMBIENTAL"&&$(".mapaNativo")[27].value.toUpperCase()=="BIOPROSPECCIÓN"&&$(".mapaNativo")[28].value.toUpperCase()=="TIPOS DE ESPECIES"
+			&&$(".mapaNativo")[29].value.toUpperCase()=="PRINCIPIOS BIOÉTICOS"&&$(".mapaNativo")[30].value.toUpperCase()=="FITOGENÉTICA"&&$(".mapaNativo")[31].value.toUpperCase()=="ZOOGENÉTICA"&&$(".mapaNativo")[32].value.toUpperCase()=="PLANTAS"
+			&&$(".mapaNativo")[33].value.toUpperCase()=="ANIMALES"&&$(".mapaNativo")[34].value.toUpperCase()=="MICROORGANISMOS"&&$(".mapaNativo")[35].value.toUpperCase()=="CADENAS TRÓFICAS")
+		$("#formNativoThird").css("display","block");
+	});
+
+	//JUEGO 1 HISTORIA
+	$(".cajonHistoria").click(function(){
+		var palabras = [{
+			"palabra":"BIOCÉNTRISMO",
+			"esta":false
+		},{
+			"palabra":"ECOCENTRISMO",
+			"esta":false
+		},{
+			"palabra":"LIBERTAD",
+			"esta":false
+		},{
+			"palabra":"IGUALDAD",
+			"esta":false
+		},{
+			"palabra":"FRATERNIDAD",
+			"esta":false
+		},{
+			"palabra":"TRANSFORMACIÓN",
+			"esta":false
+		}];
+		var puede = true;
+		for(var i=0;i<$(".cajonHistoria").length;i++){
+			var existe = false;
+			for(var j=0;j<palabras.length;j++){
+				if(palabras[j].esta)
+					continue;
+				if($(".cajonHistoria")[i].value==palabras[j].palabra){
+					palabras[j].esta = true;
+					existe = true;
+					break;
+				}
+			}
+			if(!existe)
+				puede = false;
+		}
+		if(puede)
+			$("#formHistoriaFirst").css("display","block");
+	});
+
+	//JUEGO 2 HISTORIA
+	$(".completaHistoria").click(function(){
+		if($(".completaHistoria").val().toUpperCase()=="LA BIOÉTICA BUSCA UNA TRANSFORMACIÓN EN LOS VALORES QUE RIGEN A LAS PERSONAS EN LAS DIFERENTES CULTURAS QUE EXISTEN EN EL MUNDO SOBRE TODO FRENTE A LA RELACIÓN CON LOS OTROS Y CON LA NATURALEZA")
+			$("#formHistoriaSecond").css("display","block");
+	});
+
+	//JUEGO 3 HISTORIA
+	$(".mapaconceptualHistoria").click(function(){
+		if($(".mapaHistoria")[0].value.toUpperCase()=="HISTORIA DE LA BIOÉTICA"&&$(".mapaHistoria")[1].value.toUpperCase()=="IMPACTO SOBRE EL PLANETA"&&$(".mapaHistoria")[2].value.toUpperCase()=="FRITZ JAHR"&&$(".mapaHistoria")[3].value.toUpperCase()=="SOLUCIONAR"
+			&&$(".mapaHistoria")[4].value.toUpperCase()=="ANTROPOCENTRISMO"&&$(".mapaHistoria")[5].value.toUpperCase()=="VAN RENSSELAER POTTER"&&$(".mapaHistoria")[6].value.toUpperCase()=="CALENTAMIENTO GLOBAL"&&$(".mapaHistoria")[7].value.toUpperCase()=="JURAMENTO HIPOCRÁTICO"
+			&&$(".mapaHistoria")[8].value.toUpperCase()=="ANDRÉ HELLEGUER"&&$(".mapaHistoria")[9].value.toUpperCase()=="VIH/SIDA"&&$(".mapaHistoria")[10].value.toUpperCase()=="SAN FRANCISCO DE ASÍS"&&$(".mapaHistoria")[11].value.toUpperCase()=="ALDO LEOPOLD"
+			&&$(".mapaHistoria")[12].value.toUpperCase()=="THE HASTING CENTER"&&$(".mapaHistoria")[13].value.toUpperCase()=="CALIDAD DE VIDA"&&$(".mapaHistoria")[14].value.toUpperCase()=="CENTRO DE INVESTIGACIÓN"&&$(".mapaHistoria")[15].value.toUpperCase()=="UNESCO")
+		$("#formHistoriaThird").css("display","block");
+	});
+
+	//JUEGO 1 CIBER
+	$(".tablaCiber1").click(function(){
+		var puede = true;
+		for(var i=0;i<$(".tablaCiber1 div").length;i++){
+			if($(".tablaCiber1 div")[i].style.background==""){puede=false;
+			}
+		}
+		if(puede){
+			$("#formCiberFirst").css("display","block");
+		}
+	});
+
+	//JUEGO 2 CIBER
+	validateSecondGameCIBER = function(){
+		var text= "";
+		for(var i=0;i<$(".group1h").length;i++){text+=$(".group1h")[i].value;}
+		if(text.toUpperCase()=="EMBRIÓN"){
+			var text= "";
+			for(var i=0;i<$(".group2h").length;i++){text+=$(".group2h")[i].value;}
+			if(text.toUpperCase()=="NEUROÉTICA"){
+				var text= "";
+				for(var i=0;i<$(".group3h").length;i++){text+=$(".group3h")[i].value;}
+				if(text.toUpperCase()=="GENES"){
+					var text= "";
+					for(var i=0;i<$(".group4h").length;i++){text+=$(".group4h")[i].value;}
+					if(text.toUpperCase()=="CIENCIA"){
+						var text= "";
+						for(var i=0;i<$(".group5h").length;i++){text+=$(".group5h")[i].value;}
+						if(text.toUpperCase()=="RAZILITUBUS"){
+							var text= "";
+							for(var i=0;i<$(".group1v").length;i++){text+=$(".group1v")[i].value;}
+							if(text.toUpperCase()=="ACIBOREANA"){
+								var text= "";
+								for(var i=0;i<$(".group2v").length;i++){text+=$(".group2v")[i].value;}
+								if(text.toUpperCase()=="TECNOLOGIA"){
+									var text= "";
+									for(var i=0;i<$(".group3v").length;i++){text+=$(".group3v")[i].value;}
+									if(text.toUpperCase()=="CIBERACOSO"){
+										$("#formCiberSecond").css("display","block");
+									}
+								}
+							}
+						}
+					}	
+				}		
+			}
+		}	
+	}
+	$(".tablaFull7").click(validateSecondGameCIBER);
+
+	//JuEGO 3 CIBER
+	function validarCIBER(){
+		var arrayFull = [6,7,8,9,10,11,12,13,14,16,31,32,41,45,46,48,56,60,61,62,63,64,65,66,67,68,69,70,71,75,76,80,86,90,91,96,101,105,106,111,112,113,114,115,116,117,118,120,127,128,134,135,142,144,149,150,160,164,165,176,179,180,192,194,195,208,209,210,213,214,215,216,217,218,219,220,224];
+		var puede=true;
+		for(var i=0;i<arrayFull.length;i++){
+			if ($(".tableFull8>tbody>tr>td")[arrayFull[i]].style.background!="yellow") {
+				puede=false;
+				break;
+			};
+		}
+		if(puede){
+			$("#formElGalenoThird").css("display","block");
+		}
+	}
+
+
+	$(".tableFull8>tbody>tr>td").click(function(){
+		if(this.style.background=="yellow"){
+			this.style.background="white";
+		}else{
+			this.style.background="yellow";
+		}
+		validarCIBER();
+	});		
 });

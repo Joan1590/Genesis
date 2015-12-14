@@ -104,29 +104,29 @@ input.scroll{
     background-color: rgba(0,0,0,0);
     border-color: rgba(0,0,0,0);
 }
-.tablaFull>tbody>tr>td,.tablaFull5>tbody>tr>td{
+.tablaFull>tbody>tr>td,.tablaFull5>tbody>tr>td,.tablaFull7>tbody>tr>td{
 	background-color: black;
 }
-.tablaFull>tbody>tr>.numero,.tablaFull5>tbody>tr>.numero{
+.tablaFull>tbody>tr>.numero,.tablaFull5>tbody>tr>.numero,.tablaFull7>tbody>tr>.numero{
 	width: 25px;
 	background-color: rgba(169,208,142,1) !important;
 }
-.tablaFull>tbody>tr>.letra>input,.tablaFull5>tbody>tr>.letra>input{
+.tablaFull>tbody>tr>.letra>input,.tablaFull5>tbody>tr>.letra>input,.tablaFull7>tbody>tr>.letra>input{
 	width: 100%;
 	text-align: center;
 }
-.tablaFull>tbody>tr>.letra,.tablaFull5>tbody>tr>.letra{
+.tablaFull>tbody>tr>.letra,.tablaFull5>tbody>tr>.letra,.tablaFull7>tbody>tr>.letra{
 	width: 25px;
 }
-.tablaFull,.tablaFull5{
+.tablaFull,.tablaFull5,.tablaFull7{
 	width: 100%;
 }
-.tableFull1>tbody>tr>td:hover,.tableFull6>tbody>tr>td:hover{
+.tableFull1>tbody>tr>td:hover,.tableFull6>tbody>tr>td:hover, .tableFull8>tbody>tr>td:hover{
 	background-color: red;
 	color:white;
 	cursor: pointer;
 }
-.tableFull1,.tableFull6,.tableParche1, .completa{
+.tableFull1,.tableFull6,.tableParche1, .completa, .tableNativo1, .tableHistoria1, .tablaFull7, .tableFull8{
 	width: 100%;
 	background-color: white;
 }
@@ -139,7 +139,7 @@ input.scroll{
 .cajon{
 	margin:10px;
 }
-.mapa{
+.mapa, .mapaNativo, .mapaHistoria{
 	width: 70px;
     margin: 10px;
     text-align: center;
