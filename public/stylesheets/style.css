@@ -95,9 +95,17 @@ label.form-color{
     cursor: pointer;
 }
 .backScroll {
-    background-color: rgba(140,185,226,1);
-    color: white;
+    background-color: rgba(140,185,226,1) !important;
+    color: white !important;
     text-decoration: blink;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(31,78,121,1);
+    padding: 20px;
+    text-align: center;
+    max-height: 350px;
+    overflow-y: auto;
 }
 input.scroll{
 	width: 200px;
@@ -146,4 +154,9 @@ input.scroll{
 }
 .colorwhite{
 	color: white;
+}
+
+.second-form{
+	background: url("../img/1.jpg");
+	background-size: 100%;
 }
