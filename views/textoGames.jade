@@ -15,6 +15,10 @@ block content
 				input#inputtitle(type="hidden", name="title", value="#{title}")
 				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
 				input.btn.btn-primary.big-button(type="submit", value='Diviertete')
+			form#formLoginUser(name="loginuser",method="post",action="/salon")
+				input#inputtitle(type="hidden", name="title", value="#{title}")
+				input#inputCorreoElectronico(type="hidden", placeholder="correoElectronico", name="correoElectronico", value="#{user.correoElectronico}") 
+				input.btn.btn-primary.big-button(type="submit", value='Salon')
 		.col-md-6
 			.second-form
 				pre.foo.
