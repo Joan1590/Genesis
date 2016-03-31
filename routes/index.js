@@ -26,7 +26,7 @@ router.get('/contacto', function (req, res, next){
 });
 
 router.get('/credito', function (req, res, next){
-	res.render('credito', {title: 'Crédito'});
+	res.render('credito', {title: 'Créditos'});
 });
 
 router.get('/somos', function (req, res, next){
@@ -301,10 +301,17 @@ router.post('/adduser', function (req, res, next){
 		"ciudad":req.body.ciudad,
 		"fechaNacimiento":req.body.fechaNacimiento
 	});
+	User.findOne({correoElectronico:req.body.correoElectronico}, function (err, fUser){
+		if (!fUser){
+			user.save(function (err){
+				if (!err) console.log('Usuario almacenado!!');
+				else console.log('ERROR: ' + err);
+			});
 
-	user.save(function (err){
-		if (!err) console.log('Usuario almacenado!!');
-		else console.log('ERROR: ' + err);
+			res.render('video', {title: 'Video Introductorio', user:user});
+		}
+		else
+			res.render('newuser', {title: 'Error, el usuario ya existe.'});
 	});
 
 	//account.prototype.logon(user.nombreCompleto, user.contrasena, function(err, res){
@@ -312,7 +319,7 @@ router.post('/adduser', function (req, res, next){
 	//	console.log(res);
 	//});
 
-	res.render('video', {title: 'Video Introductorio', user:user});
+	
 });
 
 validateUser = function(title,res,req,page,content,background,nivel,bagdes){

@@ -46,10 +46,10 @@ video{
 }
 
 .title{
-    color: white;
+    color: #2e6da4;
     padding: 10px;
     text-align: center;
-    text-shadow: 3px 2px gray;
+    text-shadow: 3px 2px lightblue;
     width: 250px;
     margin: 0 auto;
 }
@@ -159,4 +159,10 @@ input.scroll{
 .second-form{
 	background: url("../img/1.jpg");
 	background-size: 100%;
+}
+
+pre{
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	overflow: hidden !important;
 }
