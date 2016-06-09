@@ -60,8 +60,30 @@ $(document).ready(function(){
 	//JUEGO 3 GENESIS
 	$(".tabla3").click(function(){
 		var puede = true;
+		var yellow=0,orange = 0,blue = 0, black = 0, red = 0, gray = 0, green = 0, purple = 0;
 		for(var i=0;i<$(".tabla3 div").length;i++){
+			if($(".tabla3 div")[i].style.background=="yellow"){yellow++;}
+			if($(".tabla3 div")[i].style.background=="orange"){orange++;}
+			if($(".tabla3 div")[i].style.background=="blue"){blue++;}
+			if($(".tabla3 div")[i].style.background=="black"){black++;}
+			if($(".tabla3 div")[i].style.background=="red"){red++;}
+			if($(".tabla3 div")[i].style.background=="gray"){gray++;}
+			if($(".tabla3 div")[i].style.background=="green"){green++;}
+			if($(".tabla3 div")[i].style.background=="purple"){purple++;}
+
 			if($(".tabla3 div")[i].style.background==""){puede=false;
+			}
+		}
+		if((yellow+orange+blue+black+red+gray+green+purple)%2==0){
+			for(var i=0;i<$(".tabla3 div").length;i++){
+				if($(".tabla3 div")[i].style.background=="yellow"&&yellow==1){$(".tabla3 div")[i].style.background=""}
+				if($(".tabla3 div")[i].style.background=="orange"&&orange==1){$(".tabla3 div")[i].style.background=""}
+				if($(".tabla3 div")[i].style.background=="blue"&&blue==1){$(".tabla3 div")[i].style.background=""; $(".tabla3 div")[i].style.color="black";}
+				if($(".tabla3 div")[i].style.background=="black"&&black==1){$(".tabla3 div")[i].style.background=""; $(".tabla3 div")[i].style.color="black";}
+				if($(".tabla3 div")[i].style.background=="red"&&red==1){$(".tabla3 div")[i].style.background=""; $(".tabla3 div")[i].style.color="black";}
+				if($(".tabla3 div")[i].style.background=="gray"&&gray==1){$(".tabla3 div")[i].style.background=""}
+				if($(".tabla3 div")[i].style.background=="green"&&green==1){$(".tabla3 div")[i].style.background=""}
+				if($(".tabla3 div")[i].style.background=="purple"&&purple==1){$(".tabla3 div")[i].style.background=""; $(".tabla3 div")[i].style.color="black";}
 			}
 		}
 		if(puede){
@@ -72,8 +94,30 @@ $(document).ready(function(){
 	//JUEGO 1 El GALENO
 	$(".tabla4").click(function(){
 		var puede = true;
+		var yellow=0,orange = 0,blue = 0, black = 0, red = 0, gray = 0, green = 0, purple = 0;
 		for(var i=0;i<$(".tabla4 div").length;i++){
+			if($(".tabla4 div")[i].style.background=="yellow"){yellow++;}
+			if($(".tabla4 div")[i].style.background=="orange"){orange++;}
+			if($(".tabla4 div")[i].style.background=="blue"){blue++;}
+			if($(".tabla4 div")[i].style.background=="black"){black++;}
+			if($(".tabla4 div")[i].style.background=="red"){red++;}
+			if($(".tabla4 div")[i].style.background=="gray"){gray++;}
+			if($(".tabla4 div")[i].style.background=="green"){green++;}
+			if($(".tabla4 div")[i].style.background=="purple"){purple++;}
+
 			if($(".tabla4 div")[i].style.background==""){puede=false;
+			}
+		}
+		if((yellow+orange+blue+black+red+gray+green+purple)%2==0){
+			for(var i=0;i<$(".tabla4 div").length;i++){
+				if($(".tabla4 div")[i].style.background=="yellow"&&yellow==1){$(".tabla4 div")[i].style.background=""}
+				if($(".tabla4 div")[i].style.background=="orange"&&orange==1){$(".tabla4 div")[i].style.background=""}
+				if($(".tabla4 div")[i].style.background=="blue"&&blue==1){$(".tabla4 div")[i].style.background=""; $(".tabla4 div")[i].style.color="black";}
+				if($(".tabla4 div")[i].style.background=="black"&&black==1){$(".tabla4 div")[i].style.background=""; $(".tabla4 div")[i].style.color="black";}
+				if($(".tabla4 div")[i].style.background=="red"&&red==1){$(".tabla4 div")[i].style.background=""; $(".tabla4 div")[i].style.color="black";}
+				if($(".tabla4 div")[i].style.background=="gray"&&gray==1){$(".tabla4 div")[i].style.background=""}
+				if($(".tabla4 div")[i].style.background=="green"&&green==1){$(".tabla4 div")[i].style.background=""}
+				if($(".tabla4 div")[i].style.background=="purple"&&purple==1){$(".tabla4 div")[i].style.background=""; $(".tabla4 div")[i].style.color="black";}
 			}
 		}
 		if(puede){
@@ -317,8 +361,30 @@ $(document).ready(function(){
 	//JUEGO 1 CIBER
 	$(".tablaCiber1").click(function(){
 		var puede = true;
+		var yellow=0,orange = 0,blue = 0, black = 0, red = 0, gray = 0, green = 0, purple = 0;
 		for(var i=0;i<$(".tablaCiber1 div").length;i++){
+			if($(".tablaCiber1 div")[i].style.background=="yellow"){yellow++;}
+			if($(".tablaCiber1 div")[i].style.background=="orange"){orange++;}
+			if($(".tablaCiber1 div")[i].style.background=="blue"){blue++;}
+			if($(".tablaCiber1 div")[i].style.background=="black"){black++;}
+			if($(".tablaCiber1 div")[i].style.background=="red"){red++;}
+			if($(".tablaCiber1 div")[i].style.background=="gray"){gray++;}
+			if($(".tablaCiber1 div")[i].style.background=="green"){green++;}
+			if($(".tablaCiber1 div")[i].style.background=="purple"){purple++;}
+
 			if($(".tablaCiber1 div")[i].style.background==""){puede=false;
+			}
+		}
+		if((yellow+orange+blue+black+red+gray+green+purple)%2==0){
+			for(var i=0;i<$(".tablaCiber1 div").length;i++){
+				if($(".tablaCiber1 div")[i].style.background=="yellow"&&yellow==1){$(".tablaCiber1 div")[i].style.background=""}
+				if($(".tablaCiber1 div")[i].style.background=="orange"&&orange==1){$(".tablaCiber1 div")[i].style.background=""}
+				if($(".tablaCiber1 div")[i].style.background=="blue"&&blue==1){$(".tablaCiber1 div")[i].style.background=""; $(".tablaCiber1 div")[i].style.color="black";}
+				if($(".tablaCiber1 div")[i].style.background=="black"&&black==1){$(".tablaCiber1 div")[i].style.background=""; $(".tablaCiber1 div")[i].style.color="black";}
+				if($(".tablaCiber1 div")[i].style.background=="red"&&red==1){$(".tablaCiber1 div")[i].style.background=""; $(".tablaCiber1 div")[i].style.color="black";}
+				if($(".tablaCiber1 div")[i].style.background=="gray"&&gray==1){$(".tablaCiber1 div")[i].style.background=""}
+				if($(".tablaCiber1 div")[i].style.background=="green"&&green==1){$(".tablaCiber1 div")[i].style.background=""}
+				if($(".tablaCiber1 div")[i].style.background=="purple"&&purple==1){$(".tablaCiber1 div")[i].style.background=""; $(".tablaCiber1 div")[i].style.color="black";}
 			}
 		}
 		if(puede){
@@ -388,4 +454,20 @@ $(document).ready(function(){
 		}
 		validarCIBER();
 	});		
+
+
 });
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.toElement.innerText);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.value=ev.target.value+(data);
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
